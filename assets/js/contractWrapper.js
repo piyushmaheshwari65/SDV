@@ -1,19 +1,19 @@
+var Organizations =[
+                     { 'Name': 'A Company', 'Address': '0x3cF4fdE9F6c3aeb33964706DC7aB1B63746CeC54', 'orgtype' : 2},
+                     { 'Name': 'B Company', 'Address': '0xA28E037BEa2633683E2Dd52700C8b72BCaB4F0C1', 'orgtype' : 2}
+                    ];
 
-// { 'Name': 'A Company', 'Address': '0x3cF4fdE9F6c3aeb33964706DC7aB1B63746CeC54', 'orgtype' : 2},
-//                      { 'Name': 'B Company', 'Address': '0xA28E037BEa2633683E2Dd52700C8b72BCaB4F0C1', 'orgtype' : 2}
-
-var userDocuments = [];
-                    
-                    // { 'Name': 'Piyush', 'Address': '0x0Ed94cB25Cb50F9B0810DBC94f631f076D97FF31', 'DocHashes': 'QmPNdLC9i3ePeg1zdHJ5JykQdqgEd8xtxJXFHGCvULfT8s,QmbpQ1WwYxqHf1fJ6SX9Cn8GrtDjndEmLmkxN15xSekHe2,QmVRrWFd8FaG63ZLRqLTMqTDZLu3uE3CJKX3H4zttLRSSw,QmUJeJ1PuTCHnCQcPutHRRw8yviA32WMP6LoUjApfz28Sv,QmdaoAfLUPymo5PHR7ZTMnSrtW1U4EcTXb2DH4yykUQvqV,Qmc7SZEshRcdYK9EwKYKqTFFa35GY6bjrQ71UbLmisnWaR'}, 
-                    //  { 'Name': 'abc', 'Address': '0x77CA6C4839De5867578A5c2A1fF90D84bE16c7E5', 'DocHashes': 'QmPNdLC9i3ePeg1zdHJ5JykQdqgEd8xtxJXFHGCvULfT8s,QmbpQ1WwYxqHf1fJ6SX9Cn8GrtDjndEmLmkxN15xSekHe2,QmVRrWFd8FaG63ZLRqLTMqTDZLu3uE3CJKX3H4zttLRSSw,QmUJeJ1PuTCHnCQcPutHRRw8yviA32WMP6LoUjApfz28Sv,QmdaoAfLUPymo5PHR7ZTMnSrtW1U4EcTXb2DH4yykUQvqV,Qmc7SZEshRcdYK9EwKYKqTFFa35GY6bjrQ71UbLmisnWaR'},
-                    //  { 'Name': 'pqr', 'Address': '0x6047F8fa3186C175665851FF3fe17623CE528060', 'DocHashes': 'QmPNdLC9i3ePeg1zdHJ5JykQdqgEd8xtxJXFHGCvULfT8s,QmbpQ1WwYxqHf1fJ6SX9Cn8GrtDjndEmLmkxN15xSekHe2,QmVRrWFd8FaG63ZLRqLTMqTDZLu3uE3CJKX3H4zttLRSSw,QmUJeJ1PuTCHnCQcPutHRRw8yviA32WMP6LoUjApfz28Sv,QmdaoAfLUPymo5PHR7ZTMnSrtW1U4EcTXb2DH4yykUQvqV,Qmc7SZEshRcdYK9EwKYKqTFFa35GY6bjrQ71UbLmisnWaR'}
-              
+var userDocuments = [                    
+                    { 'Name': 'Piyush', 'Address': '0x0Ed94cB25Cb50F9B0810DBC94f631f076D97FF31', 'DocHashes': 'QmPNdLC9i3ePeg1zdHJ5JykQdqgEd8xtxJXFHGCvULfT8s,QmbpQ1WwYxqHf1fJ6SX9Cn8GrtDjndEmLmkxN15xSekHe2,QmVRrWFd8FaG63ZLRqLTMqTDZLu3uE3CJKX3H4zttLRSSw,QmUJeJ1PuTCHnCQcPutHRRw8yviA32WMP6LoUjApfz28Sv,QmdaoAfLUPymo5PHR7ZTMnSrtW1U4EcTXb2DH4yykUQvqV,Qmc7SZEshRcdYK9EwKYKqTFFa35GY6bjrQ71UbLmisnWaR'}, 
+                     { 'Name': 'abc', 'Address': '0x77CA6C4839De5867578A5c2A1fF90D84bE16c7E5', 'DocHashes': 'QmPNdLC9i3ePeg1zdHJ5JykQdqgEd8xtxJXFHGCvULfT8s,QmbpQ1WwYxqHf1fJ6SX9Cn8GrtDjndEmLmkxN15xSekHe2,QmVRrWFd8FaG63ZLRqLTMqTDZLu3uE3CJKX3H4zttLRSSw,QmUJeJ1PuTCHnCQcPutHRRw8yviA32WMP6LoUjApfz28Sv,QmdaoAfLUPymo5PHR7ZTMnSrtW1U4EcTXb2DH4yykUQvqV,Qmc7SZEshRcdYK9EwKYKqTFFa35GY6bjrQ71UbLmisnWaR'},
+                     { 'Name': 'pqr', 'Address': '0x6047F8fa3186C175665851FF3fe17623CE528060', 'DocHashes': 'QmPNdLC9i3ePeg1zdHJ5JykQdqgEd8xtxJXFHGCvULfT8s,QmbpQ1WwYxqHf1fJ6SX9Cn8GrtDjndEmLmkxN15xSekHe2,QmVRrWFd8FaG63ZLRqLTMqTDZLu3uE3CJKX3H4zttLRSSw,QmUJeJ1PuTCHnCQcPutHRRw8yviA32WMP6LoUjApfz28Sv,QmdaoAfLUPymo5PHR7ZTMnSrtW1U4EcTXb2DH4yykUQvqV,Qmc7SZEshRcdYK9EwKYKqTFFa35GY6bjrQ71UbLmisnWaR'}
+                    ];
 
 localStorage.setItem('Organizations', JSON.stringify(Organizations));
 localStorage.setItem('userDocuments', JSON.stringify(userDocuments));
 
 
-
+ 
 
 //Check KYC Status
 $('#btnCheckStatus').click( function() {
@@ -192,7 +192,7 @@ $('#btnAddOrg').click( function() {
 
 });
 
-//Add Third Party Verification Org
+//Add Third Party Verification Org-- University
 $('#btnAddThird').click( function() {
     $("#lblResultAddOrg").html("") ;
     contract.addNewOrg($("#txtAddThirdAddress").val(),$("#txtAddThirdName").val(),6,(req,res)=>{
