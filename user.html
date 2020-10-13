@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>SDV</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon1.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/login.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+  <header id="header">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <!-- <h1 class="text-light"><a href="index.html"><span>eBGVS</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="login.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+        <h1 class="text-light"><a href="index.html"><span>SDV</span></a></h1>  
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="user.html">Home</a></li>
+          <li><a href="#org" id="mnuOrg">BGV Request</a></li>
+          <li><a href="#customer" id="mnuCust">BGV Requests</a></li>
+          <li><a href="#custProfile" id="mnuProfile">My Profile</a></li>
+          <li><a href="#custRegistration" id="mnuregister">Register</a></li>        
+          <!-- mnuregister -->
+          <li><a href="#login.html" id="mnuSignOut">Sign Out</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="carousel-background"><img src="assets/img/slide/slide-1.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Welcome to <span>SDV System</span></h2>
+                <h3 class="animate__animated animate__fadeInDown" style="color:white">A Blockchain Based BGV Platform</h3>
+                <p class="animate__animated animate__fadeInUp">Be a part of the revolutionary journey of Background Verification System. </p>
+                <!-- <a href="#admin" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="assets/img/slide/slide-2.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Students</h2>
+                <p class="animate__animated animate__fadeInUp">You can initiate your BGV and later yor verified details/ documents can be used by Company for your onboarding with your consent. </p>
+                <!-- <a href="#customer" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="assets/img/slide/slide-3.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+
+                <h2 class="animate__animated animate__fadeInDown">Company</h2>
+                <p class="animate__animated animate__fadeInUp">Company can utilize the verified details of candidates to onboard new employees quickly and cheaper.</p>
+                <!-- <a href="#org" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a> -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon icofont-thin-double-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon icofont-thin-double-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <!-- ======= Header ======= -->
+ 
+
+ <!-- navigation before  -->
+
+  <main id="main">
+
+    <!-- ======= Org Section ======= -->
+    <section id="org" class="counts section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>BGV Request Actions</h2>
+        </div>
+        <div class="row no-gutters">
+
+          <div class="col-lg-12 col-md-12 d-md-flex align-items-md-stretch">
+            <div class="count-box" style="min-height:400px;">
+              <br /><strong>Select Student</strong>
+              <br /><select class="browser-default custom-select col-md-12" id="ddSelectEmp" style="width:100%"> </select>
+              <!-- <br /><strong>Employee Address</strong>
+              <div class="col-md-12"><input type="text" class="txtbox" id="txtCustAddress" style="width:100%"
+                  placeholder="Enter Employee Address" /></div> -->
+              <div class="row" style="margin-top :20px;margin-left :20px;">                
+                <div class="col-md-3"><button id="btnSendReq" class="btnGet">Send BGV Request</button></div>
+                <div class="col-md-3"><button id="btnCheckStatus" class="btnGet">Check BGV Request Status</button></div>
+                <div class="col-md-3"><button id="btnGetDetails" class="btnGet">Get Student Details</button></div>
+                <div class="col-md-3"><button id="btnVerifyCust" class="btnGet">Verify Student</button></div>
+              </div>
+
+              <br /><div class="col-md-12"><label class="label" id="lblResult"></label></div>
+            </div>
+          </div>
+
+           <!-- call to action part of shuffle template -->
+          
+          <div class="col-lg-12 col-md-12 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <div id="dvShowDetails" style="display: none;">
+              <div class="section-title">
+                <h2>Student Documents</h2>
+              </div>
+
+              <br /><strong>Educational Certificates</strong>
+              <div id="dvLoadCustEduDocs"></div>
+
+              <br /><strong>Employment Certificates</strong>
+              <div id="dvLoadCustEmpDocs"></div>
+
+              <br /><strong>Personal Identities</strong>
+              <div id="dvLoadCustPerDocs"></div>
+            </div>
+          </div>
+        </div>
+
+
+
+        </div>
+      </div>
+    </section><!-- End Org Section -->
+
+    
+
+    <!-- ======= Customer Section ======= -->
+    <section id="customer" class="counts section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Student Actions</h2>
+        </div>
+        <div class="row no-gutters">
+
+          <div class="col-lg-12 col-md-12 d-md-flex align-items-md-stretch">
+            <div class="count-box" style="min-height:400px;">
+              <br /><strong>Select Company</strong>
+              <br /><select class="browser-default custom-select col-md-12" id="ddSelectEmployee" style="width:100%"> </select>
+              <!-- <div class="col-md-12"><input type="text" class="txtbox" id="txtOrgAddress" style="width:100%"
+                  placeholder="Enter Organization Address" /></div> -->
+              <div class="row" style="margin-top :20px;margin-left :20px;">
+                <div class="col-md-6">
+                  <strong>Select which documents Company can access -</strong> <br />
+                  <label class="checkbox-inline"><input type="checkbox" value="true" id="chkEdu"> Education Certificates</label><br />
+                  <label class="checkbox-inline"><input type="checkbox" value="true" id="chkEmp"> Employment Certificates</label><br />
+                  <label class="checkbox-inline"><input type="checkbox" value="true" id="chkAadhar"> Aadhar Card</label><br />
+                  <label class="checkbox-inline"><input type="checkbox" value="true" id="chkPan"> Pancard</label><br />
+                  <label class="checkbox-inline"><input type="checkbox" value="true" id="chkDL"> Driving License</label><br />
+                  <label class="checkbox-inline"><input type="checkbox" value="true" id="chkContact"> Contact Details</label><br />
+                  <label class="checkbox-inline"><input type="checkbox" value="true" id="chkRef"> References</label>
+
+                </div>
+                <div class="col-md-3" style="vertical-align: bottom;"><button id="btnApproveKyc" class="btnPost">Approve BGV request</button></div>
+                <div class="col-md-3"><button id="btnRejectKyc" class="btnPost">Reject BGV Request</button></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 col-md-12 d-md-flex align-items-md-stretch" id="dvCheckStatus">
+            <div class="count-box">
+              <div class="col-md-12"><label class="label" id="lblResult1"></label></div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section><!-- End Customer Section -->
+
+
+    <!-- call to action part of shuffle template -->
+
+    <!-- ======= Cust Profile Section ======= -->
+    <section id="custProfile" class="counts section-bg">
+      <div class="container">
+
+
+        <!-- <div class="section-title">
+          <h2>View/ Update Details</h2>
+        </div> -->
+
+        <ul class="nav nav-tabs nav-justified md-tabs indigo" id="myTabJust" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab-just" data-toggle="tab" href="#home-just" role="tab" aria-controls="home-just"
+              aria-selected="true">My Detais</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="profile-tab-just" data-toggle="tab" href="#profile-just" role="tab" aria-controls="profile-just"
+              aria-selected="false">Upload Document</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="contact-tab-just" data-toggle="tab" href="#contact-just" role="tab" aria-controls="contact-just"
+              aria-selected="false">View Documents</a>
+          </li>
+        </ul>
+        <div class="tab-content card pt-5" id="myTabContentJust">
+          <div class="tab-pane fade show active" id="home-just" role="tabpanel" aria-labelledby="home-tab-just">
+            <div class="row no-gutters">
+
+              <div class="col-lg-12 col-md-12 d-md-flex align-items-md-stretch">
+                
+    
+    
+                <div class="count-box" style="min-height:400px;">
+                  <div class="section-title">
+                    <h2>View Basic Details</h2>
+                  </div>
+                  <!-- <strong>Customer Ethereum Address</strong>
+                  <div class="col-md-12"><input type="text" class="txtbox" id="txtUpdateCustAddress" style="width:100%"
+                      placeholder="Enter Customer Ethereum Address" disabled="disabled" /></div> -->
+                  <br /><strong>Name</strong>
+                  <div class="col-md-12"><input type="text" class="txtbox" id="txtUpdateCustName" style="width:100%"
+                      placeholder="Enter Name" /></div>
+                  <br /><strong>Permanent Address</strong>
+                  <div class="col-md-12"><input type="text" class="txtbox" id="txtUpdatePerAddress" style="width:100%"
+                      placeholder="Enter Permanent Address" /></div>
+                  <br /><strong>Current Address</strong>
+                  <div class="col-md-12"><input type="text" class="txtbox" id="txtUpdateCurAddress" style="width:100%"
+                      placeholder="Enter Current Address" /></div>
+                  <div class="row">
+                    <div class="col-md-6"><br /> <strong>Email ID</strong><input type="text" class="txtbox" id="txtUpdateCustEmail"
+                        style="width:100%" placeholder="Enter Email" disabled="disabled"/></div>
+                        <div class="col-md-6"><br /> <strong>Phone</strong><input type="text" class="txtbox" id="txtUpdateCustPhone"
+                          style="width:100%" placeholder="Enter Phone Number" /></div>
+                  </div>
+                 
+                    <div class="col-md-12"><br /><strong>Reference Email</strong><input type="text" class="txtbox"
+                        id="txtUpdateCustRefEmail" style="width:100%" placeholder="Enter Ref Email" /></div>
+                    
+                  <div class="row" style="margin-top :20px;margin-left :20px; float:right !important;">
+                    <button id="btnUpdateCust" class="btnGet">Update</button>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-lg-12 col-md-12 d-md-flex align-items-md-stretch" id="dvCheckStatus">
+                <div class="count-box">
+                  <div class="col-md-12"><label class="label" id="lblResultUpdateProfile"></label></div>
+                </div>
+              </div>   
+    
+            </div>
+          </div>
+          <div class="tab-pane fade" id="profile-just" role="tabpanel" aria-labelledby="profile-tab-just">
+            <div class="row no-gutters">
+
+              <div class="col-lg-12 col-md-12 d-md-flex align-items-md-stretch">
+                
+    
+    
+                <div class="count-box" style="min-height:400px;">
+                  <div class="section-title">
+                    <h2>Upload Documents</h2>
+                  </div>
+
+                  <strong>Document Name</strong>
+                      <div class="col-md-12"><input type="text" class="txtbox" id="txtAddDocName" style="width:100%"
+                        placeholder="Enter Document Name" /></div>
+
+                        <br /><strong>Document Type</strong>
+                        <br /><select class="browser-default custom-select col-md-4" id="ddAddDocType">
+                          <option value="1">Education Certificate</option>
+                          <option value="2">Employment Certificate</option>
+                          <option value="3">AadharCard</option>
+                          <option value="4">PanCard</option>
+                          <option value="5">Driving License</option>
+                        </select>
+                        <br /><strong>Select File</strong>  
+                  <form id="uploadDocument" enctype="multipart/form-data" action="/api/document" method="post">           
+                    <br /><input type="file" name="userDocument" />
+                      <input type="submit" value="Upload Document" name="submit" class="btnGet" style="float:right;">
+                  </form>
+                
+
+              <br /><br /> <div class="section-title">
+                <h2>Initiate verification Request</h2>
+              </div>
+
+              <!-- <br /><strong>Select Company/ Organization</strong>
+              <br /><select class="browser-default custom-select col-md-4" id="ddInitiateReqSelectOrg"> </select> -->
+
+              <div class="row" style="margin-top :20px;margin-left :20px; float:right !important;">
+                <button id="btnInitiateVerification" class="btnGet">Initiate Verification Request</button>
+              </div>
+            </div>
+          </div>
+    
+              <div class="col-lg-12 col-md-12 d-md-flex align-items-md-stretch" id="dvCheckStatus">
+                <div class="count-box">
+                  <div class="col-md-12"><label class="label" id="lblResultAddDoc"></label></div>
+                </div>
+              </div>
+    
+    
+    
+            </div>
+          </div>
+          <div class="tab-pane fade" id="contact-just" role="tabpanel" aria-labelledby="contact-tab-just">
+            <div class="row no-gutters">
+
+              <div class="col-lg-12 col-md-12 d-md-flex align-items-md-stretch">
+                
+    
+    
+                <div class="count-box" style="min-height:400px;">
+                  <div class="section-title">
+                    <h2>View Documents</h2>
+                  </div>
+
+                  <br /><strong>Educational Certificates</strong>
+                  <div id="dvLoadMyEduDocs"></div>
+
+                  <br /><strong>Employment Certificates</strong>
+                  <div id="dvLoadMyEmpDocs"></div>
+
+                  <br /><strong>Personal Identities</strong>
+                  <div id="dvLoadMyPerDocs">
+                      
+                  </div>
+                 
+                </div>
+              </div>  
+    
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+    </section><!-- End AddCus Section -->
+
+
+
+<!-- ======= cust Registration Section ======= -->
+<section id="custRegistration" class="counts section-bg">
+  <div class="container">
+
+
+    <!-- <div class="section-title">
+      <h2>View/ Update Details</h2>
+    </div> -->
+    
+    <!-- <div class="col-lg-12 col-md-12 d-md-flex align-items-md-stretch"> -->
+      <div class="count-box" style="text-align: center;font-weight: bold;font-size: x-large;">
+        Registration !!
+      </div>
+    <!-- </div> -->
+    <ul class="nav nav-tabs nav-justified md-tabs indigo" id="myTabJust" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab-just" data-toggle="tab" href="#home-just" role="tab" aria-controls="home-just"
+          aria-selected="true">Register As Student</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab-just" data-toggle="tab" href="#profile-just" role="tab" aria-controls="profile-just"
+          aria-selected="false">Register As Company</a>
+      </li>
+      
+    </ul>
+    <div class="tab-content card pt-5" id="myTabContentJust">
+      <div class="tab-pane fade show active" id="home-just" role="tabpanel" aria-labelledby="home-tab-just">
+        <div class="row no-gutters">
+
+          <div class="col-lg-12 col-md-12 d-md-flex align-items-md-stretch">
+              <div class="count-box" style="min-height:400px;">
+                <strong>Student Ethereum Address</strong>
+                <div class="col-md-12"><input type="text" class="txtbox" id="txtAddCustAddress" style="width:100%"
+                    placeholder="Enter Student Address" /></div>
+                <br /><strong>Name</strong>
+                <div class="col-md-12"><input type="text" class="txtbox" id="txtAddCustName" style="width:100%"
+                    placeholder="Enter Your Name" /></div>
+                <br /><strong>Permanent Address</strong>
+                <div class="col-md-12"><input type="text" class="txtbox" id="txtCustPerAddress" style="width:100%"
+                    placeholder="Enter Permanent Address" /></div>
+                <br /><strong>Current Address</strong>
+                <div class="col-md-12"><input type="text" class="txtbox" id="txtCustCurAddress" style="width:100%"
+                    placeholder="Enter Current Address" /></div>
+                <div class="row">
+                  <div class="col-md-6"><br /> <strong>Email ID</strong><input type="text" class="txtbox" id="txtCustEmail"
+                      style="width:100%" placeholder="Enter Email" /></div>
+                      <div class="col-md-6"><br /> <strong>Phone</strong><input type="text" class="txtbox" id="txtCustPhone"
+                        style="width:100%" placeholder="Enter Phone Number" /></div>
+                </div>
+               
+                  <div class="col-md-12"><br /><strong>Reference Email</strong><input type="text" class="txtbox"
+                      id="txtCustRefEmail" style="width:100%" placeholder="Enter Ref Email" /></div>
+                  
+                <div class="row" style="margin-top :20px;margin-left :20px; float:right !important;">
+                  <button id="btnAddCust" class="btnGet">Register</button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-12 col-md-12 d-md-flex align-items-md-stretch" id="dvCheckStatus">
+              <div class="count-box">
+                <div class="col-md-12"><label class="label" id="lblResultAddCust"></label></div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile-just" role="tabpanel" aria-labelledby="profile-tab-just">
+        <div class="row no-gutters">
+          <div class="col-lg-12 col-md-12 d-md-flex align-items-md-stretch">
+              <div class="count-box" style="min-height:400px;">
+                <strong>Company Ethereum Address</strong>
+                <div class="col-md-12"><input type="text" class="txtbox" id="txtAddOrgAddress" style="width:100%"
+                    placeholder="Enter Company Address" /></div>
+                <br /><strong>Company Name</strong>
+                <div class="col-md-12"><input type="text" class="txtbox" id="txtAddOrgName" style="width:100%"
+                    placeholder="Enter Company Name" /></div>
+                    
+               
+                <div class="row" style="margin-top :20px;margin-left :20px; float:right !important;">
+                  <button id="btnAddOrg" class="btnGet">Register</button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-12 col-md-12 d-md-flex align-items-md-stretch" id="dvCheckStatus">
+              <div class="count-box">
+                <div class="col-md-12"><label class="label" id="lblResultAddOrg"></label></div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+      
+    </div>
+    
+    
+  </div>
+</section><!-- End AddCus Section -->
+<!-- </main>End #main -->
+
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>SDV</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootstrap-3-one-page-template-free-shuffle/ -->
+        Designed by <strong>Piyush Maheshwari, Aarti Yadav and Darshan Mantri</strong>.
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <!-- SmartContract JS File -->
+  <script src="assets/js/web3.min.js"></script>
+  <script src="assets/js/loadContract.js"></script>
+  <script src="assets/js/contractWrapper.js"></script>
+</body>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+<script>
+  $(document).ready(function() {
+
+     $('#uploadForm').submit(function() {
+        $("#status").empty().text("File is uploading...");
+        $(this).ajaxSubmit({
+
+            error: function(xhr) {
+        status('Error: ' + xhr.status);
+            },
+
+            success: function(response) {
+        $("#status").empty().text(response);
+                console.log(response);
+            }
+    });
+        //Very important line, it disable the page refresh.
+    return false;
+    });    
+});
+</script>
+</html>
