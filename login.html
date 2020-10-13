@@ -81,9 +81,9 @@
                       </div>
                       <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Login">
                     </form>
-                    <a href="#!" class="forgot-password-link">Forgot password?</a>
+                    <!-- <a href="#!" class="forgot-password-link">Forgot password?</a>
                     <p class="login-card-footer-text">Don't have an account? <a href="register.html" class="text-reset">Register here</a></p>
-                   
+                    -->
                 </div>
               </div>
             </div>
@@ -106,7 +106,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootstrap-3-one-page-template-free-shuffle/ -->
-        Designed by <strong>Piyush Maheshwari</strong>.
+        Designed by <strong>Piyush Maheshwari, Aarti Yadav, Darshan Mantri.</strong>.
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -129,18 +129,6 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-<script>
-    $('#login').click( function() {
-        localStorage["LoggedInUserName"] = $("#email").val();        
-        if($("#email").val().toLowerCase() == "piyush" || $("#email").val().toLowerCase() == "aarti" || $("#email").val().toLowerCase() == "darshan" || $("#email").val().toLowerCase() == "stest")
-                    localStorage["LoggedInUserType"] = 0; //
-        else if($("#email").val().toLowerCase() == "acompany" || $("#email").val().toLowerCase() == "bcompany" || $("#email").val().toLowerCase() == "ccompany")
-                    localStorage["LoggedInUserType"] = 1;
-        else if($("#email").val().toLowerCase() == "verifyme" )
-                    localStorage["LoggedInUserType"] = 2;
 
-        window.location.href="index.html";
-    });
-</script>
 
 </html>
