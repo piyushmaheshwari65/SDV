@@ -30,12 +30,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/login.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Shuffle - v2.2.0
-  * Template URL: https://bootstrapmade.com/bootstrap-3-one-page-template-free-shuffle/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  
 </head>
 
 <body>
@@ -45,10 +40,9 @@
     <div class="container d-flex">
 
       <div class="logo mr-auto">
-        <!-- <h1 class="text-light"><a href="index.html"><span>eBGVS</span></a></h1> -->
+        <h1 class="text-light"><a href="index.html"><span>SDV</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="login.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-        <h1 class="text-light"><a href=""><span>SDV</span></a></h1>
       </div>
 
     </div>
@@ -81,9 +75,9 @@
                       </div>
                       <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Login">
                     </form>
-                    <!-- <a href="#!" class="forgot-password-link">Forgot password?</a>
+                    <a href="#!" class="forgot-password-link">Forgot password?</a>
                     <p class="login-card-footer-text">Don't have an account? <a href="register.html" class="text-reset">Register here</a></p>
-                    -->
+                   
                 </div>
               </div>
             </div>
@@ -99,14 +93,14 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>SDV</span></strong>
+        &copy; Copyright <strong><span>SDV</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootstrap-3-one-page-template-free-shuffle/ -->
-        Designed by <strong>Piyush Maheshwari, Aarti Yadav, Darshan Mantri.</strong>.
+        Designed by <strong>Piyush Maheshwari, Aarti Yadav and darshan Mantri</strong>.
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -129,6 +123,18 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+<script>
+    $('#login').click( function() {
+        localStorage["LoggedInUserName"] = $("#email").val();        
+        if($("#email").val().toLowerCase() == "piyush" || $("#email").val().toLowerCase() == "aarti" || $("#email").val().toLowerCase() == "darshan" || $("#email").val().toLowerCase() == "candidate1" || $("#email").val().toLowerCase() == "candidate2" || $("#email").val().toLowerCase() == "candidate3")
+                    localStorage["LoggedInUserType"] = 0; //
+        else if($("#email").val().toLowerCase() == "acomapny" || $("#email").val().toLowerCase() == "b comapny" || $("#email").val().toLowerCase() == "employer1" || $("#email").val().toLowerCase() == "employer2")
+                    localStorage["LoggedInUserType"] = 1;
+        else if($("#email").val().toLowerCase() == "verifyme" )
+                    localStorage["LoggedInUserType"] = 2;
 
+        window.location.href="index.html";
+    });
+</script>
 
 </html>

@@ -904,11 +904,11 @@ section {
 }
 
 @media (max-width: 992px) {
-  /* .info-box { */
+  .info-box {
     /* img {
       padding-top: 30px;
     } */
-  
+  }
   .info-box .content {
     padding-top: 30px;
   }

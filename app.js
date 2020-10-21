@@ -35,12 +35,12 @@ app.post('/api/document',function(req,res){
             return res.end("Error uploading file.");
         }
 
-        var data = new Buffer.from(fs.readFileSync(req.file.path));
+        var data = new Buffer(fs.readFileSync(req.file.path));
         ipfs.files.add(data,function(err,res1){
             console.log(res1); 
             res.send(res1);      
         })
-    }); 
+    });
 });
  
   app.get('/download',function(req,res){
