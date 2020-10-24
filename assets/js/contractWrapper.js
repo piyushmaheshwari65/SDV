@@ -1,19 +1,12 @@
-var Organizations =[
-                     { 'Name': 'A Company', 'Address': '0x3cF4fdE9F6c3aeb33964706DC7aB1B63746CeC54', 'orgtype' : 2},
-                     { 'Name': 'B Company', 'Address': '0xA28E037BEa2633683E2Dd52700C8b72BCaB4F0C1', 'orgtype' : 2}
-                    ];
+var Organizations = [{ 'Name': 'A Company', 'Address': '0xE6b76C767fa9A68A4130A9ca72EF3526F9d28AB4', 'orgtype' : 2}];
 
-var userDocuments = [                    
-                    { 'Name': 'Piyush', 'Address': '0x0Ed94cB25Cb50F9B0810DBC94f631f076D97FF31', 'DocHashes': 'QmPNdLC9i3ePeg1zdHJ5JykQdqgEd8xtxJXFHGCvULfT8s,QmbpQ1WwYxqHf1fJ6SX9Cn8GrtDjndEmLmkxN15xSekHe2,QmVRrWFd8FaG63ZLRqLTMqTDZLu3uE3CJKX3H4zttLRSSw,QmUJeJ1PuTCHnCQcPutHRRw8yviA32WMP6LoUjApfz28Sv,QmdaoAfLUPymo5PHR7ZTMnSrtW1U4EcTXb2DH4yykUQvqV,Qmc7SZEshRcdYK9EwKYKqTFFa35GY6bjrQ71UbLmisnWaR'}, 
-                     { 'Name': 'abc', 'Address': '0x77CA6C4839De5867578A5c2A1fF90D84bE16c7E5', 'DocHashes': 'QmPNdLC9i3ePeg1zdHJ5JykQdqgEd8xtxJXFHGCvULfT8s,QmbpQ1WwYxqHf1fJ6SX9Cn8GrtDjndEmLmkxN15xSekHe2,QmVRrWFd8FaG63ZLRqLTMqTDZLu3uE3CJKX3H4zttLRSSw,QmUJeJ1PuTCHnCQcPutHRRw8yviA32WMP6LoUjApfz28Sv,QmdaoAfLUPymo5PHR7ZTMnSrtW1U4EcTXb2DH4yykUQvqV,Qmc7SZEshRcdYK9EwKYKqTFFa35GY6bjrQ71UbLmisnWaR'},
-                     { 'Name': 'pqr', 'Address': '0x6047F8fa3186C175665851FF3fe17623CE528060', 'DocHashes': 'QmPNdLC9i3ePeg1zdHJ5JykQdqgEd8xtxJXFHGCvULfT8s,QmbpQ1WwYxqHf1fJ6SX9Cn8GrtDjndEmLmkxN15xSekHe2,QmVRrWFd8FaG63ZLRqLTMqTDZLu3uE3CJKX3H4zttLRSSw,QmUJeJ1PuTCHnCQcPutHRRw8yviA32WMP6LoUjApfz28Sv,QmdaoAfLUPymo5PHR7ZTMnSrtW1U4EcTXb2DH4yykUQvqV,Qmc7SZEshRcdYK9EwKYKqTFFa35GY6bjrQ71UbLmisnWaR'}
-                    ];
+var userDocuments = [{ 'Name': 'Piyush', 'Address': '0xCB52b2670738BaC0FE95443108666aB555d58bee', 'DocHashes': 'QmeE72uVqfsvQhSv9TGiGi4gh5AsHDHRwQFdEpc1x2WZkS,Qmc6fnD72exTbfonL5MdLCheqWBkCSPKQu9qrWo5ZYtjkK,QmbEdQaz9ZfXk8p6vC8EW7z45gv1CyvpXzM3YdX2upWVa3,QmVwyAtvLtLsMqqr6bhotN2UGbAc7qqwC2WbNYFzPEkvD4,QmPCzgdiZjDLG1dMfyEwuzdWPHZXRXFs4dGYAGohNJ2PHK'}];                    
 
 localStorage.setItem('Organizations', JSON.stringify(Organizations));
 localStorage.setItem('userDocuments', JSON.stringify(userDocuments));
 
 
- 
+
 
 //Check KYC Status
 $('#btnCheckStatus').click( function() {
@@ -192,7 +185,7 @@ $('#btnAddOrg').click( function() {
 
 });
 
-//Add Third Party Verification Org-- University
+//Add Third Party Verification Org
 $('#btnAddThird').click( function() {
     $("#lblResultAddOrg").html("") ;
     contract.addNewOrg($("#txtAddThirdAddress").val(),$("#txtAddThirdName").val(),6,(req,res)=>{
@@ -290,7 +283,7 @@ $('#btnUpdateCust').click( function() {
 //Customer Initiate Verification Request
 $('#btnInitiateVerification').click( function() {
     $("#lblResultAddDoc").html("") ;
-    contract.InitiateVerificationRequest("0xF10790580834f556C7CEcD7aa0BeD4DfD40bEa26",(req,res)=>{
+    contract.InitiateVerificationRequest("0xD2a20C57EC25a96304c74B7bC17e8d499306935f",(req,res)=>{
         $("#lblResultAddDoc").html("Verification Request Initiated with the selected organization.");
     })
 });
@@ -374,7 +367,7 @@ $(document).ready(function() {
              $("#lblResultAddDoc").empty().text("Document Uploaded.");
                 console.log(response);
                 console.log(response[0].hash);
-                contract.addDocument($("#txtAddDocName").val(),"0x08e20e76977dCd338546A0702281D7370Dac6158",$("#ddAddDocType option:selected").val(),response[0].hash,(req,res)=>{
+                contract.addDocument($("#txtAddDocName").val(),"0xD2a20C57EC25a96304c74B7bC17e8d499306935f",$("#ddAddDocType option:selected").val(),response[0].hash,(req,res)=>{
                  $("#lblResultAddDoc").empty().text("Document Uploaded.");
              })
                  
