@@ -769,4 +769,4 @@ window.ethereum.enable()
         contract = contractabi.at('0x9be523F5e6B4237a729FbAacf2B8ebA555aA2Bb9');
 
         console.log(contract);
-    });
+    })

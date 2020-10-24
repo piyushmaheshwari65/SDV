@@ -1,6 +1,6 @@
 var Organizations = [{ 'Name': 'A Company', 'Address': '0xE6b76C767fa9A68A4130A9ca72EF3526F9d28AB4', 'orgtype' : 2}];
 
-var userDocuments = [{ 'Name': 'Piyush', 'Address': '0xCB52b2670738BaC0FE95443108666aB555d58bee', 'DocHashes': '0x786ec4de9e3a51a0a2a859386adb1d319d05e84fdd19185a38e00683e4494ea1,0xb551fe9ac0d96a16f2de7edf4fd30c3bbfb7e10e200b79c890ae471212da6ca3,0x5cad2c1044931ac86af282f44c2a4f730635deb9a6d7cfe3c70c8858fd727eea,0x6c29cea3066270812750d9fb4ed55f5f53ad84d9d5513ef4c3da0ac2318abec7,0xf0fcc9f8ca587435ce4b240aed704aeeccab5ff6c89ee4d45e5934e30d3b73dd,0x6a885a2cbe49cb9c53f86a778c6f4ffb1ab2fa63fe06a45046e8c9d1c59f4f6d'}];                    
+var userDocuments = [{ 'Name': 'Piyush', 'Address': '0xCB52b2670738BaC0FE95443108666aB555d58bee', 'DocHashes': 'QmeE72uVqfsvQhSv9TGiGi4gh5AsHDHRwQFdEpc1x2WZkS,Qmc6fnD72exTbfonL5MdLCheqWBkCSPKQu9qrWo5ZYtjkK,QmbEdQaz9ZfXk8p6vC8EW7z45gv1CyvpXzM3YdX2upWVa3,QmVwyAtvLtLsMqqr6bhotN2UGbAc7qqwC2WbNYFzPEkvD4,QmPCzgdiZjDLG1dMfyEwuzdWPHZXRXFs4dGYAGohNJ2PHK'}];                    
 
 localStorage.setItem('Organizations', JSON.stringify(Organizations));
 localStorage.setItem('userDocuments', JSON.stringify(userDocuments));
