@@ -13,44 +13,7 @@ window.ethereum.enable()
 
         web3.eth.defaultAccount = accounts[0];
 
-        var contractabi = web3.eth.contract([
-            {
-                "inputs": [],
-                "stateMutability": "nonpayable",
-                "type": "constructor"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "address",
-                        "name": "_oAddress",
-                        "type": "address"
-                    }
-                ],
-                "name": "InitiateVerificationRequest",
-                "outputs": [
-                    {
-                        "internalType": "bool",
-                        "name": "success",
-                        "type": "bool"
-                    }
-                ],
-                "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "inputs": [],
-                "name": "accounOwner",
-                "outputs": [
-                    {
-                        "internalType": "address",
-                        "name": "",
-                        "type": "address"
-                    }
-                ],
-                "stateMutability": "view",
-                "type": "function"
-            },
+        var contractabi = web3.eth.contract([      [
             {
                 "inputs": [
                     {
@@ -64,7 +27,7 @@ window.ethereum.enable()
                         "type": "address"
                     },
                     {
-                        "internalType": "enum eBGVS.DocType",
+                        "internalType": "enum SDV.DocType",
                         "name": "_doctype",
                         "type": "uint8"
                     },
@@ -147,7 +110,7 @@ window.ethereum.enable()
                         "type": "string"
                     },
                     {
-                        "internalType": "enum eBGVS.OrgType",
+                        "internalType": "enum SDV.OrgType",
                         "name": "_type",
                         "type": "uint8"
                     }
@@ -226,306 +189,19 @@ window.ethereum.enable()
                 "inputs": [
                     {
                         "internalType": "address",
-                        "name": "_uAddress",
+                        "name": "_oAddress",
                         "type": "address"
                     }
                 ],
-                "name": "checkBgvStatus",
+                "name": "InitiateVerificationRequest",
                 "outputs": [
                     {
-                        "internalType": "enum eBGVS.State",
-                        "name": "",
-                        "type": "uint8"
-                    }
-                ],
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "address",
-                        "name": "",
-                        "type": "address"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    }
-                ],
-                "name": "documents",
-                "outputs": [
-                    {
-                        "internalType": "string",
-                        "name": "name",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "address",
-                        "name": "issuedby",
-                        "type": "address"
-                    },
-                    {
-                        "internalType": "enum eBGVS.DocType",
-                        "name": "docType",
-                        "type": "uint8"
-                    },
-                    {
-                        "internalType": "enum eBGVS.State",
-                        "name": "state",
-                        "type": "uint8"
-                    }
-                ],
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "inputs": [],
-                "name": "getMyBasicDetails",
-                "outputs": [
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "enum eBGVS.State",
-                        "name": "",
-                        "type": "uint8"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    }
-                ],
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "string",
-                        "name": "docId",
-                        "type": "string"
-                    }
-                ],
-                "name": "getMyDocument",
-                "outputs": [
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "enum eBGVS.DocType",
-                        "name": "",
-                        "type": "uint8"
-                    },
-                    {
-                        "internalType": "enum eBGVS.State",
-                        "name": "",
-                        "type": "uint8"
-                    }
-                ],
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "address",
-                        "name": "_userAddress",
-                        "type": "address"
-                    }
-                ],
-                "name": "getUserBasicDetails",
-                "outputs": [
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "enum eBGVS.State",
-                        "name": "",
-                        "type": "uint8"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    }
-                ],
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "address",
-                        "name": "_userAddress",
-                        "type": "address"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "docId",
-                        "type": "string"
-                    }
-                ],
-                "name": "getUserDocument",
-                "outputs": [
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "enum eBGVS.DocType",
-                        "name": "",
-                        "type": "uint8"
-                    },
-                    {
-                        "internalType": "enum eBGVS.State",
-                        "name": "",
-                        "type": "uint8"
-                    }
-                ],
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "address",
-                        "name": "",
-                        "type": "address"
-                    },
-                    {
-                        "internalType": "address",
-                        "name": "",
-                        "type": "address"
-                    }
-                ],
-                "name": "kycRequests",
-                "outputs": [
-                    {
-                        "internalType": "enum eBGVS.State",
-                        "name": "state",
-                        "type": "uint8"
-                    },
-                    {
                         "internalType": "bool",
-                        "name": "canViewEducation",
-                        "type": "bool"
-                    },
-                    {
-                        "internalType": "bool",
-                        "name": "canViewEmployer",
-                        "type": "bool"
-                    },
-                    {
-                        "internalType": "bool",
-                        "name": "canViewAddress",
-                        "type": "bool"
-                    },
-                    {
-                        "internalType": "bool",
-                        "name": "canViewReferences",
-                        "type": "bool"
-                    },
-                    {
-                        "internalType": "bool",
-                        "name": "canViewContactDetails",
-                        "type": "bool"
-                    },
-                    {
-                        "internalType": "bool",
-                        "name": "canViewAadhar",
-                        "type": "bool"
-                    },
-                    {
-                        "internalType": "bool",
-                        "name": "canViewPan",
-                        "type": "bool"
-                    },
-                    {
-                        "internalType": "bool",
-                        "name": "canViewDL",
+                        "name": "success",
                         "type": "bool"
                     }
                 ],
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "address",
-                        "name": "",
-                        "type": "address"
-                    }
-                ],
-                "name": "organisations",
-                "outputs": [
-                    {
-                        "internalType": "string",
-                        "name": "oname",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "enum eBGVS.OrgType",
-                        "name": "otype",
-                        "type": "uint8"
-                    },
-                    {
-                        "internalType": "enum eBGVS.State",
-                        "name": "state",
-                        "type": "uint8"
-                    }
-                ],
-                "stateMutability": "view",
+                "stateMutability": "nonpayable",
                 "type": "function"
             },
             {
@@ -610,6 +286,11 @@ window.ethereum.enable()
                 "type": "function"
             },
             {
+                "inputs": [],
+                "stateMutability": "nonpayable",
+                "type": "constructor"
+            },
+            {
                 "inputs": [
                     {
                         "internalType": "string",
@@ -646,79 +327,6 @@ window.ethereum.enable()
                     }
                 ],
                 "stateMutability": "nonpayable",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "address",
-                        "name": "",
-                        "type": "address"
-                    }
-                ],
-                "name": "userDocuments",
-                "outputs": [
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    }
-                ],
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "address",
-                        "name": "",
-                        "type": "address"
-                    }
-                ],
-                "name": "users",
-                "outputs": [
-                    {
-                        "internalType": "string",
-                        "name": "uname",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "enum eBGVS.State",
-                        "name": "state",
-                        "type": "uint8"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "permanentAddress",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "currentAddress",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "email",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "phone",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "refEmail",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "address",
-                        "name": "createdBy",
-                        "type": "address"
-                    }
-                ],
-                "stateMutability": "view",
                 "type": "function"
             },
             {
@@ -763,10 +371,403 @@ window.ethereum.enable()
                 ],
                 "stateMutability": "nonpayable",
                 "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "accounOwner",
+                "outputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "_uAddress",
+                        "type": "address"
+                    }
+                ],
+                "name": "checkBgvStatus",
+                "outputs": [
+                    {
+                        "internalType": "enum SDV.State",
+                        "name": "",
+                        "type": "uint8"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    }
+                ],
+                "name": "documents",
+                "outputs": [
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "issuedby",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "enum SDV.DocType",
+                        "name": "docType",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "enum SDV.State",
+                        "name": "state",
+                        "type": "uint8"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [],
+                "name": "getMyBasicDetails",
+                "outputs": [
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "enum SDV.State",
+                        "name": "",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "string",
+                        "name": "docId",
+                        "type": "string"
+                    }
+                ],
+                "name": "getMyDocument",
+                "outputs": [
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "enum SDV.DocType",
+                        "name": "",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "enum SDV.State",
+                        "name": "",
+                        "type": "uint8"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "_userAddress",
+                        "type": "address"
+                    }
+                ],
+                "name": "getUserBasicDetails",
+                "outputs": [
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "enum SDV.State",
+                        "name": "",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "_userAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "docId",
+                        "type": "string"
+                    }
+                ],
+                "name": "getUserDocument",
+                "outputs": [
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "enum SDV.DocType",
+                        "name": "",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "enum SDV.State",
+                        "name": "",
+                        "type": "uint8"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "name": "kycRequests",
+                "outputs": [
+                    {
+                        "internalType": "enum SDV.State",
+                        "name": "state",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "canViewEducation",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "canViewEmployer",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "canViewAddress",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "canViewReferences",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "canViewContactDetails",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "canViewAadhar",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "canViewPan",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "canViewDL",
+                        "type": "bool"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "name": "organisations",
+                "outputs": [
+                    {
+                        "internalType": "string",
+                        "name": "oname",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "enum SDV.OrgType",
+                        "name": "otype",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "enum SDV.State",
+                        "name": "state",
+                        "type": "uint8"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "name": "userDocuments",
+                "outputs": [
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
+                "inputs": [
+                    {
+                        "internalType": "address",
+                        "name": "",
+                        "type": "address"
+                    }
+                ],
+                "name": "users",
+                "outputs": [
+                    {
+                        "internalType": "string",
+                        "name": "uname",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "enum SDV.State",
+                        "name": "state",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "permanentAddress",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "currentAddress",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "email",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "phone",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "refEmail",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "createdBy",
+                        "type": "address"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
             }
+        ]
         ]);
 
-        contract = contractabi.at('0x9be523F5e6B4237a729FbAacf2B8ebA555aA2Bb9');
+        contract = contractabi.at('0xe988F1d24A0eE8920F6CB6C93f457c22223c6574');
 
         console.log(contract);
     })

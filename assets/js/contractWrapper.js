@@ -1,7 +1,9 @@
 var Organizations = [{ 'Name': 'A Company', 'Address': '0xE6b76C767fa9A68A4130A9ca72EF3526F9d28AB4', 'orgtype' : 2}];
 
 var userDocuments = [{ 'Name': 'Piyush', 'Address': '0xCB52b2670738BaC0FE95443108666aB555d58bee', 'DocHashes': 'QmeE72uVqfsvQhSv9TGiGi4gh5AsHDHRwQFdEpc1x2WZkS,Qmc6fnD72exTbfonL5MdLCheqWBkCSPKQu9qrWo5ZYtjkK,QmbEdQaz9ZfXk8p6vC8EW7z45gv1CyvpXzM3YdX2upWVa3,QmVwyAtvLtLsMqqr6bhotN2UGbAc7qqwC2WbNYFzPEkvD4,QmPCzgdiZjDLG1dMfyEwuzdWPHZXRXFs4dGYAGohNJ2PHK'},
-                     { 'Name': 'Darshan', 'Address': '0xf13696330a1B9D88f213D32e909b6eDe766E400B', 'DocHashes': 'QmeE72uVqfsvQhSv9TGiGi4gh5AsHDHRwQFdEpc1x2WZkS,Qmc6fnD72exTbfonL5MdLCheqWBkCSPKQu9qrWo5ZYtjkK,QmbEdQaz9ZfXk8p6vC8EW7z45gv1CyvpXzM3YdX2upWVa3,QmVwyAtvLtLsMqqr6bhotN2UGbAc7qqwC2WbNYFzPEkvD4,QmPCzgdiZjDLG1dMfyEwuzdWPHZXRXFs4dGYAGohNJ2PHK'}];                    
+                     { 'Name': 'Darshan', 'Address': '0xf13696330a1B9D88f213D32e909b6eDe766E400B','DocHashes':'QmQCtLkcXbiXDhgn3CmTxivEKW3B2Qa2UneC5QvptudkBs,Qmaky2a5W4Qo3t5iz2fJcDswqqXzQ6X8uiWK5L9CUnFd2m,QmRRs53g4mi8yZsmBKkP3XKRfTiWBWdZ2vzB87JR29TiQo, QmXL3oqMoDxoAMs3FD6ooANX5rZiZRUZrCWvo4QyAhPnNN, QmSEUUx7PWVRz6twvb2NvnRFBMn8B8qUGPaXtVhHRpxQjv '}
+
+];                    
 
 localStorage.setItem('Organizations', JSON.stringify(Organizations));
 localStorage.setItem('userDocuments', JSON.stringify(userDocuments));
