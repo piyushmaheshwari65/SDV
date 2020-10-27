@@ -69,14 +69,14 @@
                         <label for="email" class="sr-only">User Name</label>
                         <input type="email" name="email" id="email" class="form-control" placeholder="User Name">
                       </div>
-                      <div class="form-group mb-4">
+                      <!-- <div class="form-group mb-4">
                         <label for="password" class="sr-only">Password</label>
                         <input type="password" name="password" id="password" class="form-control" placeholder="***********">
-                      </div>
+                      </div> -->
                       <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Login">
                     </form>
-                    <a href="#!" class="forgot-password-link">Forgot password?</a>
-                    <p class="login-card-footer-text">Don't have an account? <a href="register.html" class="text-reset">Register here</a></p>
+                    <!-- <a href="#!" class="forgot-password-link">Forgot password?</a> -->
+                    <p class="login-card-footer-text">Don't have account, request university.<a href="register.html" class="text-reset">Register </a></p>
                    
                 </div>
               </div>
@@ -100,7 +100,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootstrap-3-one-page-template-free-shuffle/ -->
-        Designed by <strong>Piyush Maheshwari, Aarti Yadav and darshan Mantri</strong>.
+        Designed by <strong>Piyush Maheshwari, Aarti Yadav and Darshan Mantri</strong>.
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -127,9 +127,9 @@
         localStorage["LoggedInUserName"] = $("#email").val();        
         if($("#email").val().toLowerCase() == "piyush" || $("#email").val().toLowerCase() == "aarti" || $("#email").val().toLowerCase() == "darshan" || $("#email").val().toLowerCase() == "candidate1" || $("#email").val().toLowerCase() == "candidate2" || $("#email").val().toLowerCase() == "candidate3")
                     localStorage["LoggedInUserType"] = 0; //
-        else if($("#email").val().toLowerCase() == "acompany" || $("#email").val().toLowerCase() == "b company" || $("#email").val().toLowerCase() == "employer1" || $("#email").val().toLowerCase() == "employer2")
+        else if($("#email").val().toLowerCase() == "acompany" || $("#email").val().toLowerCase() == "bcompany" || $("#email").val().toLowerCase() == "employer1" || $("#email").val().toLowerCase() == "employer2")
                     localStorage["LoggedInUserType"] = 1;
-        else if($("#email").val().toLowerCase() == "Medi-Caps University" )
+        else if($("#email").val().toLowerCase() == "medi-caps university" )
                     localStorage["LoggedInUserType"] = 2;
 
         window.location.href="index.html";
