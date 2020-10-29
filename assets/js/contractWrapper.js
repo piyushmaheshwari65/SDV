@@ -5,7 +5,9 @@ var Organizations = [{ 'Name': 'A Company', 'Address': '0xE6b76C767fa9A68A4130A9
 var userDocuments = [{ 'Name': 'Piyush', 'Address': '0xCB52b2670738BaC0FE95443108666aB555d58bee', 'DocHashes': 'QmeE72uVqfsvQhSv9TGiGi4gh5AsHDHRwQFdEpc1x2WZkS,Qmc6fnD72exTbfonL5MdLCheqWBkCSPKQu9qrWo5ZYtjkK,QmbEdQaz9ZfXk8p6vC8EW7z45gv1CyvpXzM3YdX2upWVa3,QmVwyAtvLtLsMqqr6bhotN2UGbAc7qqwC2WbNYFzPEkvD4,QmPCzgdiZjDLG1dMfyEwuzdWPHZXRXFs4dGYAGohNJ2PHK'},
                     { 'Name': 'Darshan', 'Address': '0xf13696330a1B9D88f213D32e909b6eDe766E400B', 'DocHashes': 'QmeE72uVqfsvQhSv9TGiGi4gh5AsHDHRwQFdEpc1x2WZkS,Qmc6fnD72exTbfonL5MdLCheqWBkCSPKQu9qrWo5ZYtjkK,QmbEdQaz9ZfXk8p6vC8EW7z45gv1CyvpXzM3YdX2upWVa3,QmVwyAtvLtLsMqqr6bhotN2UGbAc7qqwC2WbNYFzPEkvD4,QmPCzgdiZjDLG1dMfyEwuzdWPHZXRXFs4dGYAGohNJ2PHK'},
                     { 'Name': 'Aarti',   'Address': '0xD3e9B5A8b498549E0ea829F7457cc67EFfD55ae3', 'DocHashes': 'QmeE72uVqfsvQhSv9TGiGi4gh5AsHDHRwQFdEpc1x2WZkS,Qmc6fnD72exTbfonL5MdLCheqWBkCSPKQu9qrWo5ZYtjkK,QmbEdQaz9ZfXk8p6vC8EW7z45gv1CyvpXzM3YdX2upWVa3,QmVwyAtvLtLsMqqr6bhotN2UGbAc7qqwC2WbNYFzPEkvD4,QmPCzgdiZjDLG1dMfyEwuzdWPHZXRXFs4dGYAGohNJ2PHK'}
-];                    
+                   , { 'Name': 'test',   'Address': '0x0F211499dBC20F7967CDf53EC3d0F4bf639cEdE2', 'DocHashes': 'QmeE72uVqfsvQhSv9TGiGi4gh5AsHDHRwQFdEpc1x2WZkS,Qmc6fnD72exTbfonL5MdLCheqWBkCSPKQu9qrWo5ZYtjkK,QmbEdQaz9ZfXk8p6vC8EW7z45gv1CyvpXzM3YdX2upWVa3,QmVwyAtvLtLsMqqr6bhotN2UGbAc7qqwC2WbNYFzPEkvD4,QmPCzgdiZjDLG1dMfyEwuzdWPHZXRXFs4dGYAGohNJ2PHK'}
+                    
+                ];                    
 
 localStorage.setItem('Organizations', JSON.stringify(Organizations));
 localStorage.setItem('userDocuments', JSON.stringify(userDocuments));
@@ -57,7 +59,7 @@ $('#btnGetDetails').click( function() {
         }
         else
         {
-            $("#lblResult").html("You are not authorized to view customer details.");
+            $("#lblResult").html("You are not authorized to view Student details.");
         }
     })
 
@@ -149,7 +151,7 @@ function rejectDocument(e)
 $('#btnVerifyCust').click( function() {
     $("#lblResult").html("") ;
     contract.verifyCustomer($("#ddSelectEmp option:selected").val(),(req,res)=>{
-        $("#lblResult").html("Customer verified!!");
+        $("#lblResult").html("Student verified!!");
     })
 });
 
@@ -157,7 +159,7 @@ $('#btnVerifyCust').click( function() {
 $('#btnSendReq').click( function() {
     $("#lblResult").html("") ;
     contract.sendBgvRequest($("#ddSelectEmp option:selected").val(),(req,res)=>{
-        $("#lblResult").html("BGV Request sent to customer. Wait for approval to view customer details.");
+        $("#lblResult").html("BGV Request sent to Student. Wait for approval to view Student details.");
     })
 });
 
@@ -182,7 +184,7 @@ $('#btnRejectKyc').click( function() {
 $('#btnAddOrg').click( function() {
     $("#lblResultAddOrg").html("") ;
     contract.addNewOrg($("#txtAddOrgAddress").val(),$("#txtAddOrgName").val(),2,(req,res)=>{
-        $("#lblResultAddOrg").html("Your Company Registered!!");
+        $("#lblResultAddOrg").html(" Company Registered!!");
         localStorage["LoggedInUserType"] = 1; //Employer
         window.location.href="index.html";
     })
@@ -194,7 +196,7 @@ $('#btnAddOrg').click( function() {
 $('#btnAddThird').click( function() {
     $("#lblResultAddOrg").html("") ;
     contract.addNewOrg($("#txtAddThirdAddress").val(),$("#txtAddThirdName").val(),6,(req,res)=>{
-        $("#lblResultAddOrg").html("Your Company Registered!!");
+        $("#lblResultAddOrg").html(" Registered!!");
         localStorage["LoggedInUserType"] = 2; //TPVA
         window.location.href="index.html";
     })
@@ -289,7 +291,7 @@ $('#btnUpdateCust').click( function() {
 $('#btnInitiateVerification').click( function() {
     $("#lblResultAddDoc").html("") ;
     contract.InitiateVerificationRequest("0xD2a20C57EC25a96304c74B7bC17e8d499306935f",(req,res)=>{
-        $("#lblResultAddDoc").html("Verification Request Initiated with the selected organization.");
+        $("#lblResultAddDoc").html("Verification Request Initiated with the University.");
     })
 });
 
