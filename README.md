@@ -1,7 +1,8 @@
 # SDV
 Student Details and document verification through Blockchain
 
-Abstract
+# Abstract
+
 Document verification is a complex domain that involves various challenging and tedious
 processes to authenticate. Moreover various types of documents for instance banking documents,
 government documents, transaction documents, educational certificates etc. might involve
